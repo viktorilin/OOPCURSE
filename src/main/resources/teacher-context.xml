@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="Teacher1" class="vik.oop.model.Teacher.Teacher">
+        <property name="id" value="1"/>
+        <property name="fullName" value="Іванов Іван Іванович"/>
+        <property name="numberOfPhone" value="+380501589935"/>
+        <property name="timeOfWork" value="5"/>
+        <property name="salary" value="100"/>
+
+    </bean>
+
+    <bean id="Teacher2" class="vik.oop.model.Teacher.Teacher">
+        <property name="id" value="2"/>
+        <property name="fullName" value="Петров Петро Петрович"/>
+        <property name="numberOfPhone" value="+380501983315"/>
+        <property name="timeOfWork" value="6"/>
+        <property name="salary" value="200"/>
+
+    </bean>
+
+    <bean id="Teacher3" class="vik.oop.model.Teacher.Teacher">
+        <property name="id" value="3"/>
+        <property name="fullName" value="Васильов Василь Васильович"/>
+        <property name="numberOfPhone" value="+380961598874"/>
+        <property name="timeOfWork" value="7"/>
+        <property name="salary" value="300"/>
+
+    </bean>
+
+    <bean id="Teacher4" class="vik.oop.model.Teacher.Teacher">
+        <property name="id" value="4"/>
+        <property name="fullName" value="Ганкевич Влад Владиславович"/>
+        <property name="numberOfPhone" value="+380503698874"/>
+        <property name="timeOfWork" value="10"/>
+        <property name="salary" value="500"/>
+
+    </bean>
+
+</beans>

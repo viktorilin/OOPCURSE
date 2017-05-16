@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="lesson-context.xml"/>
+    <bean id="dao_lesson" class="vik.oop.dao.Lesson.impls.DaoLessonImpl">
+        <constructor-arg>
+            <list>
+                <ref bean="Lesson1"/>
+                <ref bean="Lesson2"/>
+                <ref bean="Lesson3"/>
+                <ref bean="Lesson4"/>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>

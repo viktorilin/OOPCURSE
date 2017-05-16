@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="Lesson1" class="vik.oop.model.Lesson.Lesson">
+        <property name="id" value="5"/>
+        <property name="timeOfLesson" value="8:20"/>
+        <property name="numberOfClassRoom" value="209"/>
+        <property name="nameOfLesson" value="Програмування"/>
+
+    </bean>
+
+    <bean id="Lesson2" class="vik.oop.model.Lesson.Lesson">
+        <property name="id" value="6"/>
+        <property name="timeOfLesson" value="11:20"/>
+        <property name="numberOfClassRoom" value="212"/>
+        <property name="nameOfLesson" value="Математика"/>
+
+    </bean>
+
+    <bean id="Lesson3" class="vik.oop.model.Lesson.Lesson">
+        <property name="id" value="7"/>
+        <property name="timeOfLesson" value="13:20"/>
+        <property name="numberOfClassRoom" value="213"/>
+        <property name="nameOfLesson" value="ПЗМТ"/>
+
+    </bean>
+
+    <bean id="Lesson4" class="vik.oop.model.Lesson.Lesson">
+        <property name="id" value="8"/>
+        <property name="timeOfLesson" value="8:20"/>
+        <property name="numberOfClassRoom" value="208"/>
+        <property name="nameOfLesson" value="Англійська мова"/>
+
+    </bean>
+
+
+</beans>

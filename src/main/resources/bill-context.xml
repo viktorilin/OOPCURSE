@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="group_of_student-context.xml" />
+    <import resource="lesson-context.xml" />
+    <import resource="teacher-context.xml" />
+
+
+    <bean id="Bill1" class="vik.oop.model.Bill.Bill">
+        <property name="id" value="11"/>
+        <property name="Teacher" ref="Teacher1"/>
+        <property name="Lesson" ref="Lesson1"/>
+        <property name="GroupOfStudent" ref="GroupOfStudent1"/>
+
+    </bean>
+
+    <bean id="Bill2" class="vik.oop.model.Bill.Bill">
+        <property name="id" value="12"/>
+        <property name="Teacher" ref="Teacher1"/>
+        <property name="Lesson" ref="Lesson1"/>
+        <property name="GroupOfStudent" ref="GroupOfStudent2"/>
+
+    </bean>
+
+    <bean id="Bill3" class="vik.oop.model.Bill.Bill">
+        <property name="id" value="13"/>
+        <property name="Teacher" ref="Teacher1"/>
+        <property name="Lesson" ref="Lesson1"/>
+        <property name="GroupOfStudent" ref="GroupOfStudent3"/>
+
+    </bean>
+
+    <bean id="Bill4" class="vik.oop.model.Bill.Bill">
+        <property name="id" value="14"/>
+        <property name="Teacher" ref="Teacher2"/>
+        <property name="Lesson" ref="Lesson2"/>
+        <property name="GroupOfStudent" ref="GroupOfStudent2"/>
+
+    </bean>
+
+    <bean id="Bill5" class="vik.oop.model.Bill.Bill">
+        <property name="id" value="15"/>
+        <property name="Teacher" ref="Teacher2"/>
+        <property name="Lesson" ref="Lesson2"/>
+        <property name="GroupOfStudent" ref="GroupOfStudent3"/>
+
+    </bean>
+
+    <bean id="Bill6" class="vik.oop.model.Bill.Bill">
+        <property name="id" value="16"/>
+        <property name="Teacher" ref="Teacher3"/>
+        <property name="Lesson" ref="Lesson3"/>
+        <property name="GroupOfStudent" ref="GroupOfStudent1"/>
+
+    </bean>
+
+    <bean id="Bill7" class="vik.oop.model.Bill.Bill">
+        <property name="id" value="17"/>
+        <property name="Teacher" ref="Teacher3"/>
+        <property name="Lesson" ref="Lesson3"/>
+        <property name="GroupOfStudent" ref="GroupOfStudent2"/>
+
+    </bean>
+
+    <bean id="Bill8" class="vik.oop.model.Bill.Bill">
+        <property name="id" value="18"/>
+        <property name="Teacher" ref="Teacher1"/>
+        <property name="Lesson" ref="Lesson1"/>
+        <property name="GroupOfStudent" ref="GroupOfStudent1"/>
+
+    </bean>
+
+    <bean id="Bill9" class="vik.oop.model.Bill.Bill">
+        <property name="id" value="19"/>
+        <property name="Teacher" ref="Teacher3"/>
+        <property name="Lesson" ref="Lesson3"/>
+        <property name="GroupOfStudent" ref="GroupOfStudent3"/>
+
+    </bean>
+
+    <bean id="Bill10" class="vik.oop.model.Bill.Bill">
+        <property name="id" value="20"/>
+        <property name="Teacher" ref="Teacher2"/>
+        <property name="Lesson" ref="Lesson1"/>
+        <property name="GroupOfStudent" ref="GroupOfStudent3"/>
+
+    </bean>
+
+</beans>
