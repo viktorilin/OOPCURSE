@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body ng-app="Start">
+<div class="container" style="margin-top: 30px" np-controller="FirstController">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Lessons</div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Time of Lesson</th>
+                            <th>Number of class room</th>
+                            <th>Name of lesson</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in lessons" >
+                            <td>{{item.id}}</td>
+                            <td>{{item.timeOfLesson}}</td>
+                            <td>{{item.numberOfClassRoom}}</td>
+                            <td>{{item.nameOfLesson}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+</html>
