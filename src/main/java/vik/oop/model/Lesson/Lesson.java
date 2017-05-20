@@ -1,5 +1,7 @@
 package vik.oop.model.Lesson;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Created by Asus on 27.03.2017.
  */
@@ -9,16 +11,6 @@ package vik.oop.model.Lesson;
     private String timeOfLesson;
     private int numberOfClassRoom;
     private String nameOfLesson;
-
-    @Override
-    public String toString() {
-        return "Lesson{" +
-                "id=" + id +
-                ", timeOfLesson='" + timeOfLesson + '\'' +
-                ", numberOfClassRoom=" + numberOfClassRoom +
-                ", nameOfLesson='" + nameOfLesson + '\'' +
-                '}';
-    }
 
     public Lesson() {
     }

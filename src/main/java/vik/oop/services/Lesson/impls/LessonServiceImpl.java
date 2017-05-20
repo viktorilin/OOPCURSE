@@ -1,5 +1,6 @@
 package vik.oop.services.Lesson.impls;
 
+import org.springframework.stereotype.Service;
 import vik.oop.dao.Lesson.impls.DaoLessonImpl;
 import vik.oop.model.Lesson.Lesson;
 import vik.oop.services.Lesson.interfaces.ILessonService;

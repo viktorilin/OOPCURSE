@@ -1,5 +1,6 @@
 package vik.oop.dao.Lesson.impls;
 
+import org.springframework.stereotype.Service;
 import vik.oop.dao.Lesson.interfaces.IDaoLesson;
 import vik.oop.model.Lesson.Lesson;
 
@@ -13,6 +14,7 @@ import java.util.List;
 /**
  * Created by Asus on 03.04.2017.
  */
+@Service
 public class DaoLessonImpl implements IDaoLesson
 {
     public List<Lesson> lessons = new ArrayList<Lesson>();

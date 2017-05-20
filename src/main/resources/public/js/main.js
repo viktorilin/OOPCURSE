@@ -8,14 +8,14 @@
 //         nameOfLesson:"Math"
 //     }];
 // });
-
+//
 var app = angular.module("laba3", []);
 
 app.controller("AppCtrl", function($scope, $http) {
-    $scope.lessons = [{
-        id: 1,
-        timeOfLesson: "7:20",
-        numberOfClassRoom: 243,
-        nameOfLesson: "Math"
-    }];
+    $scope.lessons = [];
+
+    $http.get('/api/lesson').then (function (data) {
+        $scope.lessons=response.data;
+        console.log(response);
+    });
 });
