@@ -1,10 +1,21 @@
-var app = angular.module("Start",[]);
+// var app = angular.module("Course",[]);
+//
+// app.controller("AppCtrl", function ($scope) {
+//     $scope.lessons = [{
+//         id: 1,
+//         timeOfLesson: "7:20",
+//         numberOfClassRoom: 243,
+//         nameOfLesson:"Math"
+//     }];
+// });
 
-app.controller("FirstController", function ($scope) {
+var app = angular.module("laba3", []);
+
+app.controller("AppCtrl", function($scope, $http) {
     $scope.lessons = [{
-        id: '1',
-        timeOfLesson: '7:20',
-        numberOfClassRoom: '243',
-        nameOfLesson:"Math"
+        id: 1,
+        timeOfLesson: "7:20",
+        numberOfClassRoom: 243,
+        nameOfLesson: "Math"
     }];
 });
