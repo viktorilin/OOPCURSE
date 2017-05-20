@@ -1,5 +1,6 @@
 package vik.oop.dao.GroupOfStudent.impls;
 
+import org.springframework.stereotype.Service;
 import vik.oop.dao.GroupOfStudent.interfaces.IDaoGroupOfStudent;
 import vik.oop.model.GroupOfStudent.GroupOfStudent;
 
@@ -13,6 +14,7 @@ import java.util.List;
 /**
  * Created by Asus on 03.04.2017.
  */
+@Service
 public class DaoGroupOfStudentImpl implements IDaoGroupOfStudent
 {
     public List<GroupOfStudent> groupOfStudents = new ArrayList<GroupOfStudent>();

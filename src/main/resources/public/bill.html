@@ -2,31 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lesson table</title>
+    <title>Group of student table</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body ng-app="laba3">
-<div class="container" style="margin-top: 30px" ng-controller="LessonController">
+<div class="container" style="margin-top: 30px" ng-controller="BillController">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Lessons</div>
+                <div class="panel-heading">Bills</div>
                 <div class="panel-body">
                     <table class="table table-striped">
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Time of Lesson</th>
-                            <th>Number of class room</th>
-                            <th>Name of lesson</th>
+                            <th>Teacher</th>
+                            <th>Lesson</th>
+                            <th>Group of students</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="item in lessons" >
+                        <tr ng-repeat="item in bills" >
                             <td>{{item.id}}</td>
-                            <td>{{item.timeOfLesson}}</td>
-                            <td>{{item.numberOfClassRoom}}</td>
-                            <td>{{item.nameOfLesson}}</td>
+                            <td>{{item.teacher}}</td>
+                            <td>{{item.lesson}}</td>
+                            <td>{{item.groupOfStudent}}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -37,7 +37,7 @@
 </div>
 
 <script type="text/javascript" src="js/angular.min.js"></script>
-<script type="text/javascript" src="js/lesson.js"></script>
+<script type="text/javascript" src="js/bill.js"></script>
 
 
 </body>

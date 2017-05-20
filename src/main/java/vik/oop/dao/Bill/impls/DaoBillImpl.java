@@ -1,5 +1,6 @@
 package vik.oop.dao.Bill.impls;
 
+import org.springframework.stereotype.Service;
 import vik.oop.dao.Bill.interfaces.IDaoBill;
 import vik.oop.dao.GroupOfStudent.impls.DaoGroupOfStudentImpl;
 import vik.oop.dao.Lesson.impls.DaoLessonImpl;
@@ -15,6 +16,7 @@ import java.util.List;
 /**
  * Created by Asus on 03.04.2017.
  */
+@Service
 public class DaoBillImpl implements IDaoBill
 {
     public List<Bill> bills = new ArrayList<Bill>();

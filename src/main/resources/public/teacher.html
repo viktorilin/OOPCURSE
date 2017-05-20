@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lesson table</title>
+    <title>Teacher table</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body ng-app="laba3">
-<div class="container" style="margin-top: 30px" ng-controller="LessonController">
+<div class="container" style="margin-top: 30px" ng-controller="TeacherController">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
@@ -16,17 +16,19 @@
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Time of Lesson</th>
-                            <th>Number of class room</th>
-                            <th>Name of lesson</th>
+                            <th>Full name</th>
+                            <th>Number of phone</th>
+                            <th>Time of work</th>
+                            <th>Salary</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="item in lessons" >
+                        <tr ng-repeat="item in teachers" >
                             <td>{{item.id}}</td>
-                            <td>{{item.timeOfLesson}}</td>
-                            <td>{{item.numberOfClassRoom}}</td>
-                            <td>{{item.nameOfLesson}}</td>
+                            <td>{{item.fullName}}</td>
+                            <td>{{item.numberOfPhone}}</td>
+                            <td>{{item.timeOfWork}}</td>
+                            <td>{{item.salary}}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -37,7 +39,7 @@
 </div>
 
 <script type="text/javascript" src="js/angular.min.js"></script>
-<script type="text/javascript" src="js/lesson.js"></script>
+<script type="text/javascript" src="js/teacher.js"></script>
 
 
 </body>

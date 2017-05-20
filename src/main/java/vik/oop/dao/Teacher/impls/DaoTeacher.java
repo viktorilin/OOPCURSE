@@ -1,5 +1,6 @@
 package vik.oop.dao.Teacher.impls;
 
+import org.springframework.stereotype.Service;
 import vik.oop.dao.Teacher.interfaces.IDaoTeacher;
 import vik.oop.model.GroupOfStudent.GroupOfStudent;
 import vik.oop.model.Teacher.Teacher;
@@ -14,6 +15,7 @@ import java.util.List;
 /**
  * Created by Asus on 09.04.2017.
  */
+@Service
 public class DaoTeacher implements IDaoTeacher
 {
 
