@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by Asus on 23.04.2017.
  */
-
 @RestController
 public class FirstController {
 // Створення програмного проекту по керуванню роботи ...

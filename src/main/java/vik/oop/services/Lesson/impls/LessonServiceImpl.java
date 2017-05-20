@@ -10,6 +10,7 @@ import java.util.List;
 /**
  * Created by Asus on 09.04.2017.
  */
+@Service
 public class LessonServiceImpl implements ILessonService
 {
     ILessonService iLessonService;
@@ -40,5 +41,9 @@ public class LessonServiceImpl implements ILessonService
     public void showAll() {
         iLessonService.showAll();
     }
+
+    //бізнес логіка
+
+
 
 }

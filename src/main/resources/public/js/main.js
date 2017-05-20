@@ -10,11 +10,9 @@
 // });
 //
 var app = angular.module("laba3", []);
-
-app.controller("AppCtrl", function($scope, $http) {
+app.controller("LessonController", function ($scope,$http) {
     $scope.lessons = [];
-
-    $http.get('/api/lesson').then (function (data) {
+    $http.get('http://localhost:8080/api/lesson').then(function (response){
         $scope.lessons=response.data;
         console.log(response);
     });
