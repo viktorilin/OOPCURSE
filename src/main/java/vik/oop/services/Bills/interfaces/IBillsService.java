@@ -15,10 +15,10 @@ public interface IBillsService
     void updateBill(Bill bill);
     void deleteBill(int id);
     void showAll();
-    public int earningsForDay();
-    public int salaryForTeacher();
-    public int paymentFromGroupOfStudent();
-    public int rentOfClassRoom();
-    public int maximumSalary();
+    public int earningsForDay(List<Bill> bills);
+    public int salaryForTeacher(Bill bill);
+    public int paymentFromGroupOfStudent(Bill bill);
+    public double maxRentOfClassRoom(List<Bill> bills);
+    public int maximumSalary(List<Bill> bills);
 
 }

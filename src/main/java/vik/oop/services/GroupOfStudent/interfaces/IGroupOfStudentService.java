@@ -15,4 +15,9 @@ public interface IGroupOfStudentService
     void updateGroupOfStudent(GroupOfStudent groupOfStudent);
     void deleteGroupOfStudent(int id);
     void showAll();
+    int getNumberOfStudentsOnCurrentDepartment(List<GroupOfStudent> groupOfStudents,String department);
+    int getNumberOfCourseOfCurrentGroup(GroupOfStudent groupOfStudent);
+    String getSpecialtiesOnCurrentDepartment(List<GroupOfStudent> groupOfStudents,String department);
+    int getNumberOfStudentsOnCurrentSpecialty(List<GroupOfStudent> groupOfStudents, String specialty);
+    int getNumberOfStudentsOnCurrentCourse(List<GroupOfStudent> groupOfStudents, int numberOfCourse);
 }

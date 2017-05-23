@@ -3,6 +3,7 @@ package vik.oop;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import vik.oop.dao.Bill.impls.DaoBillImpl;
+import vik.oop.dao.GroupOfStudent.impls.DaoGroupOfStudentImpl;
 import vik.oop.dao.Teacher.impls.DaoTeacher;
 import vik.oop.model.Bill.Bill;
 import vik.oop.model.GroupOfStudent.GroupOfStudent;
@@ -77,8 +78,12 @@ public class Main
 //        DaoTeacher daoTeacher = new DaoTeacher();
 //        daoTeacher.createTeacher(teacher);
 //        System.out.println(daoTeacher.getAll());
+//        DaoGroupOfStudentImpl daoGroupOfStudent = new DaoGroupOfStudentImpl();
+//        List<GroupOfStudent> list = daoGroupOfStudent.readAll();
+//        System.out.println(list.get(1));
+//        int i = list.get(1).getNumberOfGroup() / 100;
+//
+//        System.out.println(i);
 
-
-
-  }
+    }
 }

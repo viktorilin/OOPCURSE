@@ -12,34 +12,47 @@ import java.util.ArrayList;
  */
 public class  Bills
 {
-    private ArrayList<Bill> bills;
+    Integer id;
+    Integer teacher_id;
+    Integer groupOfStudent_id;
+    Integer lesson_id;
 
-    public ArrayList<Bill> getBills() {
-        return bills;
+    public Bills(Integer id, Integer teacher_id, Integer groupOfStudent_id, Integer lesson_id) {
+        this.id = id;
+        this.teacher_id = teacher_id;
+        this.groupOfStudent_id = groupOfStudent_id;
+        this.lesson_id = lesson_id;
     }
 
-    public void setBills(ArrayList<Bill> bills) {
-        this.bills = bills;
+    public Integer getId() {
+        return id;
     }
 
-
-    public void createBills() {
-
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public void readBills() {
-
+    public Integer getTeacher_id() {
+        return teacher_id;
     }
 
-    public void updateBills() {
-
+    public void setTeacher_id(Integer teacher_id) {
+        this.teacher_id = teacher_id;
     }
 
-    public void deleteBills() {
-
+    public Integer getGroupOfStudent_id() {
+        return groupOfStudent_id;
     }
 
-    public void getAll() {
+    public void setGroupOfStudent_id(Integer groupOfStudent_id) {
+        this.groupOfStudent_id = groupOfStudent_id;
+    }
 
+    public Integer getLesson_id() {
+        return lesson_id;
+    }
+
+    public void setLesson_id(Integer lesson_id) {
+        this.lesson_id = lesson_id;
     }
 }

@@ -4,9 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import vik.oop.dao.Bill.impls.DaoBillImpl;
-import vik.oop.dao.GroupOfStudent.impls.DaoGroupOfStudentImpl;
 import vik.oop.model.Bill.Bill;
-import vik.oop.model.GroupOfStudent.GroupOfStudent;
+import vik.oop.model.Bills.Bills;
 
 import java.util.List;
 
@@ -21,4 +20,5 @@ public class BillController {
     public List<Bill> billList(){
         return daoBill.readAll();
     }
+
 }

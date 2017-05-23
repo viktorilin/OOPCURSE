@@ -15,4 +15,9 @@ public interface ILessonService
     void updateLesson(Lesson lesson);
     void deleteLesson(int id);
     void showAll();
-}
+    boolean isInThisClassRoomLesson(List<Lesson> lessons, int numberOfClassRoom);
+    int getNumberOfLesson(Lesson lesson);
+    int getNumberOfFloorOfCurrentClassRoomOfCurrentLesson(Lesson lesson);
+    int getMaxNumberOfClassRoom(List<Lesson> lessons);
+    double getRentOfClassRoom(Lesson lesson);
+ }

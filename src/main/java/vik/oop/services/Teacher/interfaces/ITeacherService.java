@@ -15,4 +15,9 @@ public interface ITeacherService
     void updateTeacher(Teacher teacher);
     void deleteTeacher(int id);
     void showAll();
+    String nameOfTheBestTeacher(List<Teacher> teachers);
+    String numberOfPhoneOfTheBestTeacher(List<Teacher>teachers);
+    int getPaymentForTeacher(Teacher teacher);
+    int getMaximumPaymentForTeacher(List<Teacher> teachers);
+    int getMinimumPaymentForTeacher(List<Teacher> teachers);
 }

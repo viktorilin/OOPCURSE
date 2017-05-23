@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
     private int numberOfClassRoom;
     private String nameOfLesson;
 
-    public Lesson() {
+    public Lesson(){
     }
 
     public Lesson(int id, String timeOfLesson, int numberOfClassRoom, String nameOfLesson) {

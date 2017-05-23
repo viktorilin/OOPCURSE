@@ -1,6 +1,7 @@
 package vik.oop.services.Teacher.impls;
 
 import vik.oop.dao.Teacher.impls.DaoTeacher;
+import vik.oop.model.Lesson.Lesson;
 import vik.oop.model.Teacher.Teacher;
 import vik.oop.services.Teacher.interfaces.ITeacherService;
 
@@ -39,5 +40,48 @@ public class TeacherServiceImpl implements ITeacherService
     public void showAll() {
         iTeacherService.showAll();
     }
+
+    public String nameOfTheBestTeacher(List<Teacher> teachers){
+        String result = teachers.get(0).getFullName();
+        for (int i = 0; i < teachers.size()-1 ; i++) {
+            if (teachers.get(i).getTimeOfWork()>teachers.get(i+1).getTimeOfWork())
+                result = teachers.get(i).getFullName();
+        }
+        return result;
+
+    }
+
+    public String numberOfPhoneOfTheBestTeacher(List<Teacher>teachers){
+        String result = teachers.get(0).getNumberOfPhone();
+        for (int i = 0; i < teachers.size()-1 ; i++) {
+            if (teachers.get(i).getTimeOfWork()>teachers.get(i+1).getTimeOfWork())
+                result = teachers.get(i).getNumberOfPhone();
+        }
+        return result;
+
+    }
+
+    public int getPaymentForTeacher(Teacher teacher){
+        return teacher.getTimeOfWork()*teacher.getSalary();
+    }
+
+    public int getMaximumPaymentForTeacher(List<Teacher> teachers) {
+        int result = 0;
+        for (int i = 0; i < teachers.size()-1 ; i++) {
+            if (iTeacherService.getPaymentForTeacher(teachers.get(i)) > iTeacherService.getPaymentForTeacher(teachers.get(i+1)))
+                result = iTeacherService.getPaymentForTeacher(teachers.get(i));
+        }
+        return result;
+    }
+
+    public int getMinimumPaymentForTeacher(List<Teacher> teachers){
+        int result = 0;
+        for (int i = 0; i < teachers.size()-1 ; i++) {
+            if (iTeacherService.getPaymentForTeacher(teachers.get(i)) < iTeacherService.getPaymentForTeacher(teachers.get(i+1)))
+                result = iTeacherService.getPaymentForTeacher(teachers.get(i));
+        }
+        return result;
+    }
+
 
 }
