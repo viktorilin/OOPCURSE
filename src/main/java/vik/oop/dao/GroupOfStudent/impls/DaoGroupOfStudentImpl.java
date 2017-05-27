@@ -63,7 +63,7 @@ public class DaoGroupOfStudentImpl implements IDaoGroupOfStudent
         {
             if((groupOfStudent.getId())==id)
             {
-                result = new GroupOfStudent();
+                result = groupOfStudent;
             }
 
         }

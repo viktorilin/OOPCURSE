@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import vik.oop.dao.Bill.impls.DaoBillImpl;
 import vik.oop.dao.GroupOfStudent.impls.DaoGroupOfStudentImpl;
+import vik.oop.dao.Lesson.impls.DaoLessonImpl;
 import vik.oop.dao.Teacher.impls.DaoTeacher;
 import vik.oop.model.Bill.Bill;
 import vik.oop.model.GroupOfStudent.GroupOfStudent;
@@ -84,6 +85,8 @@ public class Main
 //        int i = list.get(1).getNumberOfGroup() / 100;
 //
 //        System.out.println(i);
+        DaoLessonImpl daoLesson = new DaoLessonImpl();
+        System.out.println(daoLesson.getLesson(1).getNumberOfClassRoom());
 
     }
 }

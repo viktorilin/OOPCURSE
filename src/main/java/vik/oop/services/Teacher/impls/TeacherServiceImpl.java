@@ -17,6 +17,10 @@ public class TeacherServiceImpl implements ITeacherService
     public TeacherServiceImpl(DaoTeacher daoTeacher) {
     }
 
+    public TeacherServiceImpl() {
+
+    }
+
     public List<Teacher> getAll() {
         return iTeacherService.getAll();
     }
@@ -68,17 +72,17 @@ public class TeacherServiceImpl implements ITeacherService
     public int getMaximumPaymentForTeacher(List<Teacher> teachers) {
         int result = 0;
         for (int i = 0; i < teachers.size()-1 ; i++) {
-            if (iTeacherService.getPaymentForTeacher(teachers.get(i)) > iTeacherService.getPaymentForTeacher(teachers.get(i+1)))
-                result = iTeacherService.getPaymentForTeacher(teachers.get(i));
+            if (teachers.get(i).getTimeOfWork()*teachers.get(i).getSalary() > teachers.get(i+1).getTimeOfWork()*teachers.get(i+1).getSalary())
+                result = teachers.get(i).getTimeOfWork()*teachers.get(i).getSalary();
         }
         return result;
     }
 
     public int getMinimumPaymentForTeacher(List<Teacher> teachers){
-        int result = 0;
+        int result = 10000000;
         for (int i = 0; i < teachers.size()-1 ; i++) {
-            if (iTeacherService.getPaymentForTeacher(teachers.get(i)) < iTeacherService.getPaymentForTeacher(teachers.get(i+1)))
-                result = iTeacherService.getPaymentForTeacher(teachers.get(i));
+            if (teachers.get(i).getTimeOfWork()*teachers.get(i).getSalary() < teachers.get(i+1).getTimeOfWork()*teachers.get(i+1).getSalary())
+                result = teachers.get(i).getTimeOfWork()*teachers.get(i).getSalary();
         }
         return result;
     }

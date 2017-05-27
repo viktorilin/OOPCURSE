@@ -67,7 +67,7 @@ public class DaoTeacher implements IDaoTeacher
         {
             if((teacher.getId())==id)
             {
-                result = new Teacher();
+                result = teacher;
             }
 
         }

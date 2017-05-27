@@ -57,11 +57,11 @@ public class DaoLessonImpl implements IDaoLesson
 
     public Lesson getLesson(int id) {
         Lesson result = null;
-        for (Lesson lesson:lessons)
+        for (Lesson lesson:this.lessons)
         {
             if((lesson.getId())==id)
             {
-                result = new Lesson();
+                result = lesson;
             }
 
         }

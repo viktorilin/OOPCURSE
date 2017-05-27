@@ -67,7 +67,7 @@ public class DaoBillImpl implements IDaoBill
         {
             if((bill.getId())==id)
             {
-                result = new Bill();
+                result = bill;
             }
 
         }

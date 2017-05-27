@@ -80,8 +80,10 @@ public class GroupOfStudentServiceImpl implements IGroupOfStudentService {
 
     public int getNumberOfStudentsOnCurrentCourse(List<GroupOfStudent> groupOfStudents, int numberOfCourse){
         int result = 0;
+        int number ;
         for (GroupOfStudent groupOfStudent:groupOfStudents) {
-            if (iGroupOfStudentService.getNumberOfCourseOfCurrentGroup(groupOfStudent)==numberOfCourse) {
+            number = groupOfStudent.getNumberOfGroup()/100;
+            if (number==numberOfCourse) {
                 result+=groupOfStudent.getNumberOfStudents();
             }
         }

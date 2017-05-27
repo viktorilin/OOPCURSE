@@ -5,7 +5,9 @@ import vik.oop.model.Teacher.Teacher;
 import vik.oop.services.Bills.interfaces.IBillsService;
 import vik.oop.services.GroupOfStudent.impls.GroupOfStudentServiceImpl;
 import vik.oop.services.GroupOfStudent.interfaces.IGroupOfStudentService;
+import vik.oop.services.Lesson.impls.LessonServiceImpl;
 import vik.oop.services.Lesson.interfaces.ILessonService;
+import vik.oop.services.Teacher.impls.TeacherServiceImpl;
 import vik.oop.services.Teacher.interfaces.ITeacherService;
 
 import java.util.List;
@@ -42,36 +44,45 @@ public class BillsServiceImpl implements IBillsService {
 
 
     public int earningsForDay(List<Bill> bills) {
-        return 0;
+        int result = 0;
+        LessonServiceImpl lessonService = new LessonServiceImpl();
+        BillsServiceImpl billsService = new BillsServiceImpl();
+        for (Bill bill:bills) {
+            result += billsService.paymentFromGroupOfStudent(bill);
+            result -= billsService.salaryForTeacher(bill);
+            result -= lessonService.getRentOfClassRoom(bill.getLesson());
+        }
+        return result;
     }
 
     public int salaryForTeacher(Bill bill) {
-        ITeacherService iTeacherService = null;
-        return (iTeacherService.getPaymentForTeacher(bill.getTeacher())) * (bill.getGroupOfStudent().getNumberOfStudents());
+        TeacherServiceImpl teacherService = new TeacherServiceImpl();
+        return (teacherService.getPaymentForTeacher(bill.getTeacher())) * (bill.getGroupOfStudent().getNumberOfStudents());
     }
 
     public int paymentFromGroupOfStudent(Bill bill) {
-        ILessonService iLessonService = null;
-        return (int) (iLessonService.getRentOfClassRoom(bill.getLesson()) * bill.getGroupOfStudent().getNumberOfStudents());
+        LessonServiceImpl lessonService = new LessonServiceImpl();
+        return (int) (lessonService.getRentOfClassRoom(bill.getLesson()) * bill.getGroupOfStudent().getNumberOfStudents());
     }
 
     public double maxRentOfClassRoom(List<Bill> bills) {
-        ILessonService iLessonService = null;
-        double result = iLessonService.getRentOfClassRoom(bills.get(0).getLesson());
+        LessonServiceImpl lessonService = new LessonServiceImpl();
+        double result = lessonService.getRentOfClassRoom(bills.get(0).getLesson());
         for (int i = 0; i < bills.size() - 1; i++) {
-            if (iLessonService.getRentOfClassRoom(bills.get(i).getLesson()) > iLessonService.getRentOfClassRoom(bills.get(i + 1).getLesson()))
-                result = iLessonService.getRentOfClassRoom(bills.get(i).getLesson());
+            if (lessonService.getRentOfClassRoom(bills.get(i).getLesson()) > lessonService.getRentOfClassRoom(bills.get(i + 1).getLesson()))
+                result = lessonService.getRentOfClassRoom(bills.get(i).getLesson());
         }
         return result;
     }
 
     public int maximumSalary(List<Bill> bills) {
+        BillsServiceImpl billsService = new BillsServiceImpl();
         int i =0;
         int result =0;
         for (i = 0; i < bills.size()-1;i++) {
             Bill bill  = bills.get(i);
-            if(iBillsService.salaryForTeacher(bill) > iBillsService.salaryForTeacher(bills.get(i+1)))
-            result = iBillsService.salaryForTeacher(bills.get(i));
+            if(billsService.salaryForTeacher(bill) > billsService.salaryForTeacher(bills.get(i+1)))
+            result = billsService.salaryForTeacher(bills.get(i));
         }
         return result;
     }

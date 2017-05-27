@@ -19,6 +19,10 @@ public class LessonServiceImpl implements ILessonService
     public LessonServiceImpl(DaoLessonImpl daoLesson) {
     }
 
+    public LessonServiceImpl() {
+
+    }
+
     public List<Lesson> getAll() {
         return iLessonService.getAll();
     }
@@ -83,7 +87,25 @@ public class LessonServiceImpl implements ILessonService
     }
 
     public double getRentOfClassRoom(Lesson lesson){
-        return 1000/iLessonService.getNumberOfLesson(lesson)/iLessonService.getNumberOfFloorOfCurrentClassRoomOfCurrentLesson(lesson);
+        int result;
+        int result1 =lesson.getNumberOfClassRoom()/100;
+        if (Objects.equals(lesson.getTimeOfLesson(), "8:20"))
+            result = 1;
+        if (Objects.equals(lesson.getTimeOfLesson(), "9:50"))
+            result =2;
+        if (Objects.equals(lesson.getTimeOfLesson(), "11:30"))
+            result = 3;
+        if (Objects.equals(lesson.getTimeOfLesson(), "13:00"))
+            result = 4;
+        if (Objects.equals(lesson.getTimeOfLesson(), "14:40"))
+            result = 5;
+        if (Objects.equals(lesson.getTimeOfLesson(), "16:10"))
+            result = 6;
+        if (Objects.equals(lesson.getTimeOfLesson(), "17:50"))
+            result = 7;
+        else
+            result = 8;
+        return 1000/result/result1;
 }
 
 
