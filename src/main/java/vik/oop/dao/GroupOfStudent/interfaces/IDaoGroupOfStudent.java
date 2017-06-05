@@ -8,8 +8,7 @@ import java.util.List;
 /**
  * Created by Asus on 03.04.2017.
  */
-public interface IDaoGroupOfStudent
-{
+public interface IDaoGroupOfStudent {
     ArrayList<GroupOfStudent> readAll();
     List<GroupOfStudent> getAll();
     GroupOfStudent getGroupOfStudent(int id);
@@ -17,5 +16,4 @@ public interface IDaoGroupOfStudent
     void updateGroupOfStudent (GroupOfStudent bill);
     void deleteGroupOfStudent (int id);
     void showAll();
-
 }

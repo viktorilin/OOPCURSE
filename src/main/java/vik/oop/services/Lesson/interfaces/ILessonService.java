@@ -7,8 +7,7 @@ import java.util.List;
 /**
  * Created by Asus on 09.04.2017.
  */
-public interface ILessonService
-{
+public interface ILessonService {
     List<Lesson> getAll();
     Lesson getLesson(int id);
     void createLesson(Lesson lesson);

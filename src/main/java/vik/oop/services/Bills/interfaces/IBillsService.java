@@ -7,8 +7,7 @@ import java.util.List;
 /**
  * Created by Asus on 09.04.2017.
  */
-public interface IBillsService
-{
+public interface IBillsService {
     List<Bill> getAll();
     Bill getBill(int id);
     void createBill(Bill bill);
@@ -20,5 +19,4 @@ public interface IBillsService
     public int paymentFromGroupOfStudent(Bill bill);
     public double maxRentOfClassRoom(List<Bill> bills);
     public int maximumSalary(List<Bill> bills);
-
 }
